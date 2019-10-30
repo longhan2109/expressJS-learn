@@ -7,6 +7,8 @@ module.exports.index = function(req, res){
 }
 
 module.exports.search = function(req, res){
+    var users = db.get('users').value()
+
     var q = req.query.q
     var matchedUsers = users.filter(function(user){
         return user.name.indexOf(q) !== -1
