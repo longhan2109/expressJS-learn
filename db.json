@@ -24,6 +24,12 @@
       "name": "Bao",
       "phone": "9012090912",
       "id": "hE2O0iJ3"
+    },
+    {
+      "name": "Hán Nam Long",
+      "phone": "0943499021",
+      "id": "L7TLyWXQ",
+      "avatar": "uploads/0967a21af5f76d7b1a84a36502de700b"
     }
   ],
   "products": [
@@ -627,5 +633,8 @@
       "image": "https://loremflickr.com/320/240",
       "description": "aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis"
     }
+  ],
+  "sessions": [
+    
   ]
 }

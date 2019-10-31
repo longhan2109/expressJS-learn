@@ -15,14 +15,15 @@ const authRoute = require('./router/auth-route')
 const productRoute = require('./router/product-route')
 
 const authMiddleware = require('./middleware/auth-middleware')
+const sessionMiddleware = require('./middleware/session-middleware')
 
 app.set('view engine', 'pug')
 app.set('views', './views')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-
 app.use(cookieParser(process.env.SESSION_SECRET))
+app.use(sessionMiddleware)
 
 app.use(express.static('public'))
 
