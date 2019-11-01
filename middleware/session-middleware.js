@@ -11,8 +11,7 @@ module.exports = function(req, res, next) {
         db.get('sessions').push({
             id : sessionId
         }).write()
-    }
-
-    console.log(req.signedCookies)    
+    } 
+    
     next()
 }
