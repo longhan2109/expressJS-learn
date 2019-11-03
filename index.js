@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cookieParser(process.env.SESSION_SECRET))
 app.use(sessionMiddleware)
-app.use(cartMiddleware)
+// app.use(cartMiddleware)
 // app.use(csurf({ cookie : true}))
 
 
@@ -40,7 +40,7 @@ app.get('/', function(req, res){
 })
 
 app.use('/users',authMiddleware.requireAuth, userRoute)
-app.use('/products', productRoute)
+app.use('/products',sessionMiddleware, cartMiddleware ,productRoute)
 app.use('/auth', authRoute)
 app.use('/transfer',authMiddleware.requireAuth ,transferRoute)
 app.use('/cart', cartRoute)

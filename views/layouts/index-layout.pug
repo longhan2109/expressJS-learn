@@ -16,8 +16,7 @@ html
                         a.nav-link(href='/products') Products
                     li.nav-item
                         a.nav-link(href='/transfer/create') Transfer
-            if(session)
-                p= session.inCart + ' products in your cart'
+           
             if(user)
                 p= user.name
 

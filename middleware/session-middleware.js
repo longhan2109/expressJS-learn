@@ -9,7 +9,8 @@ module.exports = function(req, res, next) {
         })
 
         db.get('sessions').push({
-            id : sessionId
+            id : sessionId,
+            inCart : 0
         }).write()
     } 
     
