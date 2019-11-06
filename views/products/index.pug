@@ -5,7 +5,7 @@ block content
     h1 Products
 
     .d-flex.align-items-center
-        if(session.inCart)
+        if(session)
             p.float-right= session.inCart
         form.ml-auto.d-flex(action="/products/search", method="GET")
             input.form-control(type="text", name="product")

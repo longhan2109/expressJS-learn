@@ -20,7 +20,7 @@ module.exports = function(req, res, next) {
     }
     
 
-    // console.log(session);
+    console.log(session);
   }
 
   next();
